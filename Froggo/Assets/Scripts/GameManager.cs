@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +14,14 @@ public class GameManager : MonoBehaviour
     private int score;
     private int lives;
     private int timer;
+
+    public GameObject gameOverMenu;
+
+    public Text scoreText;
+    public Text livesText;
+    public Text timerText;
+
+    AudioSource audioSource;
 
     private void Awake()
     {
@@ -25,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void NewGame()
     {
+        gameOverMenu.SetActive(false);
         SetScore(0);
         SetLives(3);
         NewLevel();
@@ -56,12 +68,14 @@ public class GameManager : MonoBehaviour
     private IEnumerator Timer(int duration)
     {
         timer = duration;
+        timerText.text = timer.ToString();
 
         while (timer > 0)
         {
             yield return new WaitForSeconds(1);
 
             timer--;
+            timerText.text = timer.ToString();
         }
 
         frogger.Death();
@@ -71,7 +85,7 @@ public class GameManager : MonoBehaviour
     {
         SetLives(lives - 1);
 
-        if(lives > 0)
+        if (lives > 0)
         {
             Invoke(nameof(Respawn), 1f);
         }
@@ -84,6 +98,30 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         frogger.gameObject.SetActive(false);
+        gameOverMenu.SetActive(true);
+
+        StopAllCoroutines();
+        StartCoroutine(PlayAgain());
+    }
+
+    private IEnumerator PlayAgain()
+    {
+        bool playAgain = false;
+
+        while(!playAgain)
+        {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                playAgain = true;
+            }
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                playAgain= false;
+                Application.Quit(); 
+            }
+            yield return null;
+        }
+        NewGame();
     }
 
     public void AdvancedRow()
@@ -126,10 +164,12 @@ public class GameManager : MonoBehaviour
     private void SetScore(int score)
     {
         this.score = score;
+        scoreText.text = score.ToString();
     }
 
     private void SetLives(int lives)
     {
         this.lives = lives;
+        livesText.text = lives.ToString();
     }
 }

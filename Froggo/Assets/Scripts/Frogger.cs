@@ -14,10 +14,17 @@ public class Frogger : MonoBehaviour
 
     private float farthestRow;
 
+    AudioSource audioSource;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spawnPosition = transform.position;
+    }
+
+    public void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -48,9 +55,11 @@ public class Frogger : MonoBehaviour
     {
         //transform.position += direction;
         Vector3 destination = transform.position + direction;
+        audioSource.Play();
         Collider2D barrier = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Barrier"));
         Collider2D platform = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Platform"));
         Collider2D obstacle = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Obstacle"));
+
 
         if (barrier != null)
         {
