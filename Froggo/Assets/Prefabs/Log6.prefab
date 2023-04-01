@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5452749552186808081}
   - component: {fileID: 4925624495041452743}
   - component: {fileID: 4078507540505651106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 8239572424451163369}
   - component: {fileID: 1835735708644804618}
   - component: {fileID: 3103428718494121277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 5811895134109048680}
   - component: {fileID: 1076296569491477934}
   - component: {fileID: 7400771078179987188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 368448352613712698}
   - component: {fileID: 873550145101196041}
   - component: {fileID: 7975854290068431940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 4576653113197219118}
   - component: {fileID: 1866356972864509341}
   - component: {fileID: 7261994148103901112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5782929412951271837}
-  m_Layer: 0
+  - component: {fileID: 4465938095846474688}
+  m_Layer: 6
   m_Name: Log6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,6 +593,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4465938095846474688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8119293904834982138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bca4411c363484cad524f0cfc4b7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 1, y: 0}
+  speed: 3
+  size: 6
 --- !u!1 &9001739829670363417
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +619,7 @@ GameObject:
   - component: {fileID: 1921695033226957734}
   - component: {fileID: 7386412628313648870}
   - component: {fileID: 5200510047614430165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
