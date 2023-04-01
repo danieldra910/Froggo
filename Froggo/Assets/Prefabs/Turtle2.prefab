@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6772639413190749791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72869701836447809}
+  m_Layer: 0
+  m_Name: Turtle2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72869701836447809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6772639413190749791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9116473405614941991}
+  - {fileID: 6361760216975367590}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5717690276027795063
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 72869701836447809}
+    m_Modifications:
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260995111975755436, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_Name
+      value: Turtle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5f12ece07565d047bf171b390642973, type: 3}
+--- !u!4 &9116473405614941991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+  m_PrefabInstance: {fileID: 5717690276027795063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7607963470992620790
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 72869701836447809}
+    m_Modifications:
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260995111975755436, guid: f5f12ece07565d047bf171b390642973, type: 3}
+      propertyPath: m_Name
+      value: Turtle (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5f12ece07565d047bf171b390642973, type: 3}
+--- !u!4 &6361760216975367590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3593143809089659216, guid: f5f12ece07565d047bf171b390642973, type: 3}
+  m_PrefabInstance: {fileID: 7607963470992620790}
+  m_PrefabAsset: {fileID: 0}
