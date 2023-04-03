@@ -10,11 +10,18 @@ public class Frogger : MonoBehaviour
     public Sprite leapSprite;
     public Sprite deathSprite;
 
-    private Vector3 spawnPosition;
+    private Vector2 spawnPosition;
 
     private float farthestRow;
 
     AudioSource audioSource;
+
+    private GameManager gameManager;
+
+    public Vector3 show;
+    public Vector3 move;
+
+    
 
     private void Awake()
     {
@@ -25,36 +32,39 @@ public class Frogger : MonoBehaviour
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        gameManager =FindObjectOfType<GameManager>();
+        
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            Move(Vector3.up);
+            Move(Vector2.up);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 180f);
-            Move(Vector3.down);
+            Move(Vector2.down);
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 90f);
-            Move(Vector3.left);
+            Move(Vector2.left);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             transform.rotation = Quaternion.Euler(0f, 0f, -90f);
-            Move(Vector3.right);
+            Move(Vector2.right);
         }
+
     }
 
-    private void Move(Vector3 direction)
+    private void Move(Vector2 direction)
     {
         //transform.position += direction;
-        Vector3 destination = transform.position + direction;
+        Vector2 destination = (Vector2)transform.position + direction;
         audioSource.Play();
         Collider2D barrier = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Barrier"));
         Collider2D platform = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Platform"));
@@ -85,7 +95,7 @@ public class Frogger : MonoBehaviour
             if(destination.y > farthestRow)
             {
                 farthestRow = destination.y;
-                FindObjectOfType<GameManager>().AdvancedRow();
+                gameManager.AdvancedRow();
             }
 
             StartCoroutine(Leap(destination));
@@ -93,9 +103,9 @@ public class Frogger : MonoBehaviour
 
     }
 
-    private IEnumerator Leap(Vector3 destination)
+    private IEnumerator Leap(Vector2 destination)
     {
-        Vector3 startPosition = transform.position;
+        Vector2 startPosition = transform.position;
         float elapsed = 0f;
         float duration = 0.125f;
 
@@ -104,7 +114,7 @@ public class Frogger : MonoBehaviour
         while(elapsed < duration)
         {
             float t = elapsed / duration;
-            transform.position = Vector3.Lerp(startPosition, destination, t);
+            transform.position = Vector2.Lerp(startPosition, destination, t);
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -119,7 +129,7 @@ public class Frogger : MonoBehaviour
         spriteRenderer.sprite = deathSprite;
         enabled = false;
 
-        FindObjectOfType<GameManager>().Died();
+        gameManager.Died();
     }
 
     public void Respawn()
